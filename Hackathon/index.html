@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var maindiv=document.createElement("div");
+        document.body.appendChild(maindiv)
+
+     var font=document.createElement("font");
+     font.setAttribute("font-size","large")
+     font.innerHTML="WELCOME TO SLIDING TILE"
+    // font.setAttribute("color","white")
+maindiv.appendChild(font)
+
+//maindiv.appendChild("<br>")
+var headdiv=document.createElement("div");
+maindiv.appendChild(headdiv)
+
+        var label=document.createElement("label")
+label.setAttribute("for","levels")
+label.innerText="List of Difficulty Levels"
+label.setAttribute("color","white")
+headdiv.appendChild(label)
+var dropdown=document.createElement("select")
+dropdown.setAttribute("name","levels")
+dropdown.setAttribute("id","index")
+var option1=document.createElement("option")
+option1.setAttribute("value","Easy")
+option1.innerText="Easy"
+dropdown.appendChild(option1)
+
+
+
+var option2=document.createElement("option")
+option2.setAttribute("value","Medium")
+option2.setAttribute("selected","selected")
+option2.innerText="Medium"
+dropdown.appendChild(option2)
+
+var option3=document.createElement("option")
+option3.setAttribute("value","Hard")
+option3.innerText="Hard"
+dropdown.appendChild(option3)
+
+var option4=document.createElement("option")
+option4.setAttribute("value","Advanced")
+option4.innerText="Advanced"
+dropdown.appendChild(option4)
+
+label.appendChild(dropdown)
+
+ var opt=document.getElementById("index").value;
+ var se=document.querySelector("#index")
+ //se.addEventListener("change",display)
+ console.log(opt)
+
+ 
+ var root = document.createElement('div');
+root.setAttribute('class','board');
+root.setAttribute("background-color","green")
+maindiv.appendChild(root);
+
+
+
+  var script = document.createElement('script'); 
+          
+          script.src =  
+        "easy.js"; 
+        var link=document.createElement("link")
+        link.setAttribute("rel","stylesheet")
+        link.setAttribute("href","easystyle.css")
+        document.head.appendChild(link)
+                  
+                document.body.appendChild(script) 
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
